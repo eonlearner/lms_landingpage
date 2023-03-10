@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/logo.ico' %}" rel="icon">
+    <link href="{% static 'img/logo.ico' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+    
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "25%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <header>LOGO</header>
+      <ul>
+        <li><a href="#"><i class="fas fa-newspaper"></i>COURSES</a></li>
+        <li><a href="#"><i class="fas fa-users"></i>GROUPS</a></li>
+        <li><a href="#"><i class="fas fa-user-circle"></i>CONFERENCE</a></li>
+        <li><a href="#"><i class="fas fa-bars"></i>SELF TRAINING</a></li>
+        <li><a href="#"><i class="fas fa-suitcase"></i>DISCUSSION</a></li>
+        <li><a href="#"><i class="fa fa-calendar"></i>CALENDER</a></li>
+      </ul>
+    </div>
+    <!-- Page Content -->
+    <div style="margin-left:20%">
+
+      <div class="col-4-md">
+        <label>DASHBOARD |</label>
+        <select class="dropdown">
+            <option value="admin.html">ADMINISTRATOR</a></option>
+            <option value="instructor.html">INSTRUCTOR</a></option>
+            <option value="learners.html">LEARNER</a></option>
+        </select>
+          <label aria-setsize="20px">MESSAGES</label>
+          <label aria-setsize="20px">GO TO</label>
+          <label aria-setsize="20px">HELP</label>
+          <label aria-setsize="20px">     </label>
+          <input type="text" placeholder="Search.." class="search-box"><i class="fa fa-search"></i>
+      </div>
+      <br/><br/>
+    <div id="btnContainer">
+      <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+      <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+    </div>
+    <br>
+
+    <div class="row">
+  <div class="column">
+    <div class="card">
+      <a href="https://youtu.be/OBKA5fxjBm8"><i class="fa fa-play-circle"> </i></a>
+      <p>________________</p>
+      <p>Introduction</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <a href="https://youtu.be/OBKA5fxjBm8"><i class="fa fa-play-circle"> </i></a>
+      <p>________________</p>
+      <p>Introduction</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <a href="https://youtu.be/OBKA5fxjBm8"><i class="fa fa-play-circle"> </i></a>
+      <p>________________</p>
+      <p>Introduction</p>
+    </div>
+  </div>
+  
+    <div class="row-md-4">
+  <div class="column">
+    <div class="card">
+      <a href="https://youtu.be/OBKA5fxjBm8"><i class="fa fa-play-circle"> </i></a>
+      <p>________________</p>
+      <p>Introduction</p>
+    </div>
+  </div>
+    </div>
+
+</form>
+{{ st_msg }}
+</body>
+</html>
